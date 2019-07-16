@@ -1,6 +1,6 @@
 package com.Stackroute.pe2;
 
-public class EvenNumberTest {
+public class EvenNumber {
     public static boolean isEven(int number)
     {
         if(number==0)

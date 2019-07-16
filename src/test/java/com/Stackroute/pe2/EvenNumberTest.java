@@ -4,9 +4,9 @@ import org.junit.*;
 
 import static org.junit.Assert.*;
 
-public class EvenNumberTestTest {
+public class EvenNumberTest {
 
-    EvenNumberTest evenNumberTest;
+    EvenNumber evenNumberTest;
     /* @Before annotation is used on a method containing Java
     code to run before each test case. i.e it runs before each test execution.
     In the setup method ,object of class is declared
@@ -14,7 +14,7 @@ public class EvenNumberTestTest {
     @Before
     public void setup() {
 
-        this.evenNumberTest= new EvenNumberTest();
+        this.evenNumberTest= new EvenNumber();
     }
     @After
     public void tearDown()
