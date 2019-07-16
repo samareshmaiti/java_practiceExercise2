@@ -48,8 +48,21 @@ public class FactorialTest {
     This method will return a message showing out of range
      */
     @Test
-    public void givenInputShouldReturnResult(){
-        String actualresult=factorialTest.printLongFactorial(10);
-        assertEquals("value should be out of range",actualresult);
+    public void givenInputShouldReturnFactorial(){
+        String actualresult=factorialTest.printIntFactorial(10);
+        assertEquals("showing Factorial",actualresult);
     }
+
+    /*
+    This method will return an output
+     */
+    @Test
+    public void givenInputShouldReturnFactorial(){
+        String actualresult=factorialTest.printLongFactorial(20);
+        assertEquals("Factorial of long",actualresult);
+    }
+    /*
+    This method will return a message showing out of range
+     */
+
 }
