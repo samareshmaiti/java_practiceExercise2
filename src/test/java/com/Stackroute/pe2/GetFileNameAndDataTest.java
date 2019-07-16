@@ -29,21 +29,21 @@ In the setup method ,object of class is declared
         this.getFileNameAndData=null;
     }
     @Test
-    public void givenFolderNameShouldStartWithValidValue()
+    public void givenFileNameShouldReturnString()
     {
         String[] actualresult =getFileNameAndData.getResult("Documents.java");
         assertEquals("file name is correct",actualresult);
     }
     @Test
-    public void givenFileNameShouldNotStartWithValidValue()
+    public void givenFileNameShouldReturnError()
     {
-        String[] actualresult =getFileNameAndData.getResult("@java");
+        String[] actualresult =getFileNameAndData.getResult("@hello");
         assertEquals("file name is not correct",actualresult);
     }
     @Test
-    public void givenFileNameShouldHaveAProperExtenssion()
+    public void givenFileNameShouldReturnNoSuchFileFound()
     {
-        String[] actualresult =getFileNameAndData.getResult(".txt");
+        String[] actualresult =getFileNameAndData.getResult("txt");
         assertEquals("file name extension is correct",actualresult);
     }
 }

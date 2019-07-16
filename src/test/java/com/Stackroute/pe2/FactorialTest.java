@@ -29,18 +29,18 @@ public class FactorialTest {
     }
 
     @Test
-    public void givenInputShouldBePositive(){
-        String actualresult=factorialTest.printIntFactorial(n);
+    public void givenInputShouldReturnError(){
+        String actualresult=factorialTest.printIntFactorial(-9);
         assertEquals("value should be positive",actualresult);
     }
     @Test
     public void givenInputShouldReturnOutOfRange(){
-        String actualresult=factorialTest.printIntFactorial(n);
+        String actualresult=factorialTest.printIntFactorial(15);
         assertEquals("value should be within the range",actualresult);
     }
     @Test
-    public void givenInputValueShouldBeOutOfRange(){
-        String actualresult=factorialTest.printLongFactorial(n);
+    public void givenInputShouldReturnResult(){
+        String actualresult=factorialTest.printLongFactorial(10);
         assertEquals("value should be out of range",actualresult);
     }
 }

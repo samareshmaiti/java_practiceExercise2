@@ -32,19 +32,12 @@ CheckFrequencyOfFile checkFrequencyOfFile;
     /* this function checks for empty file
      */
     @Test
-    public void givenFileShouldHaveSomeData()
+    public void givenFileShouldReturnEmptyFile()
     {
         String[] actualresult = checkFrequencyOfFile.checkFrequency(" ");
         assertEquals("file is empty",actualresult);
     }
-    /* this function checks whether there is a duplicate file
-     */
-    @Test
-    public void givenFileShouldBeUnique()
-    {
-        String[] actualresult = checkFrequencyOfFile.checkFrequency("");
-        assertEquals("word is alredy taken",actualresult);
-    }
+
     /* this function checks for proper output
      */
     @Test
@@ -53,6 +46,14 @@ CheckFrequencyOfFile checkFrequencyOfFile;
     {
         String[] actualresult = checkFrequencyOfFile.checkFrequency("input.txt");
         assertEquals("proper output",actualresult);
+    }
+    /* this function checks whether there is a duplicate file
+     */
+    @Test
+    public void givenFileShouldReturnDuplicate()
+    {
+        String[] actualresult = checkFrequencyOfFile.checkFrequency("input.txt");
+        assertEquals("word is alredy taken",actualresult);
     }
 
 }

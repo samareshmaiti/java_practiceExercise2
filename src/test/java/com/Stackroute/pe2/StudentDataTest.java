@@ -34,15 +34,15 @@ public class StudentDataTest {
     /* this function will return proper output
      */
     @Test
-    public void CheckIftheGivenNumberOfStudentShouldBeValid(){
+    public void givenNumberShouldReturnString(){
         int actualresult =studentData.getStudentData(7);
-        assertEquals("entered positive value",actualresult);
+        assertEquals("entered proper value",actualresult);
 
     }
     /* this function will return to enter positive value
      */
     @Test
-    public void checkIfTheGivenArrayShouldNotBeEqualToNumberOfStudent(){
+    public void givenNegativeNumberShouldReturnError(){
         int actualresult = studentData.getStudentData(-2);
         assertEquals("enter positive value",actualresult);
     }
@@ -50,7 +50,7 @@ public class StudentDataTest {
      */
 
     @Test
-    public void checkIfMarksSHouldNotBeOutOfLimit(){
+    public void givenNumberShouldReturnOutOfRange(){
         int actualresult = studentData.getStudentData(100);
         assertEquals("enter value within the limit",actualresult);
     }
