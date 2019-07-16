@@ -12,13 +12,13 @@ public class StudentDataTest {
     @Before
     public void setUp(){
         //arrange
-        System.out.println("inside before");
+
         this.studentData = new StudentData();
     }
 
     @After
     public void tearDown()  {
-        System.out.println("inside after");
+
         this.studentData=null;
     }
     @Test

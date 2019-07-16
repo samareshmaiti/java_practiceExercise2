@@ -9,17 +9,21 @@ import static org.junit.Assert.*;
 
 public class CheckFrequencyOfFileTest {
 CheckFrequencyOfFile checkFrequencyOfFile;
+/* @Before annotation is used on a method containing Java
+    code to run before each test case. i.e it runs before each test execution.
+    In the setup method ,object of class is declared
+ */
     @Before
-    public void setUp() throws Exception {
-    }
-    @BeforeClass
-    public static void beforeClass()
+    public void setUp()
     {
-        System.out.println("Before class");
+        this.checkFrequencyOfFile=new CheckFrequencyOfFile();
     }
 
+
     @After
-    public void tearDown() throws Exception {
+    public void tearDown()
+    {
+        this.checkFrequencyOfFile=null;
     }
     @Test
     public void givenFileShouldHaveSomeData()

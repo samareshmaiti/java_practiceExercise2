@@ -7,29 +7,22 @@ import static org.junit.Assert.assertEquals;
 public class FrequencyOfWordsTest {
 
     FrequencyOfWords frequencyOfWords;
+    /* @Before annotation is used on a method containing Java
+    code to run before each test case. i.e it runs before each test execution.
+    In the setup method ,object of class is declared
+ */
     @Before
     public void setup() {
-        System.out.println("Inside before");
+
         this.frequencyOfWords = new FrequencyOfWords();
     }
     @After
     public void tearDown()
     {
-        System.out.println("inside after");
-        frequencyOfWords =null;
-    }
-    @BeforeClass
-    public static void beforeClass()
-    {
-        System.out.println("Before class");
+
+        this.frequencyOfWords=null;
     }
 
-    @AfterClass
-
-    public static void afterClass()
-    {
-        System.out.println("After class");
-    }
 
 
     @Test
@@ -38,4 +31,5 @@ public class FrequencyOfWordsTest {
         String actualresult =frequencyOfWords.frequency("@java");
         assertEquals("file name is not correct",actualresult);
     }
+
 }

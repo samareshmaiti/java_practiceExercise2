@@ -6,14 +6,22 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class getFileNameAndDataTest {
-     checkFrequencyOfFile getFileNameAndData;
+public class GetFileNameAndDataTest {
+     GetFileNameAndDataTest getFileNameAndData;
+    /* @Before annotation is used on a method containing Java
+code to run before each test case. i.e it runs before each test execution.
+In the setup method ,object of class is declared
+*/
     @Before
-    public void setUp() throws Exception {
+    public void setUp()
+    {
+        this.getFileNameAndData=new GetFileNameAndDataTest();
     }
 
     @After
-    public void tearDown() throws Exception {
+    public void tearDown()
+    {
+        this.getFileNameAndData=null;
     }
     @Test
     public void givenFolderNameShouldStartWithValidValue()
