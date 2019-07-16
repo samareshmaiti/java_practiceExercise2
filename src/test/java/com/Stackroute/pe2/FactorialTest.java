@@ -7,7 +7,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class FactorialTest {
-    FactorialTest factorialTest;
+    Factorial factorial;
     /* @Before annotation is used on a method containing Java
     code to run before each test case. i.e it runs before each test execution.
     In the setup method ,object of class is declared
@@ -15,7 +15,7 @@ public class FactorialTest {
     @Before
     public void setUp()
     {
-        this.factorialTest=new FactorialTest();
+        this.factorial=new Factorial();
     }
     /*  @After annotation is used on a method containing java code to run after each test case.
     These methods will run even if any exceptions are thrown in the test case or in the case
@@ -25,7 +25,7 @@ public class FactorialTest {
     @After
     public void tearDown()
     {
-       this.factorialTest=null;
+       this.factorial=null;
     }
     /*
     This method will return an error as the given input is negative
@@ -33,7 +33,7 @@ public class FactorialTest {
 
     @Test
     public void givenInputShouldReturnError(){
-        String actualresult=factorialTest.printIntFactorial(-9);
+        String actualresult=factorial.printIntFactorial(-9);
         assertNotEquals("value should be positive",actualresult);
     }
     /*
@@ -41,15 +41,15 @@ public class FactorialTest {
      */
     @Test
     public void givenInputShouldReturnOutOfRange(){
-        String actualresult=factorialTest.printIntFactorial(15);
+        String actualresult=factorial.printIntFactorial(15);
         assertEquals("value should be within the range",actualresult);
     }
     /*
     This method will return a message showing out of range
      */
     @Test
-    public void givenInputShouldReturnFactorial(){
-        String actualresult=factorialTest.printIntFactorial(10);
+    public void givenInputShouldReturnFactorialOutput(){
+        String actualresult=factorial.printIntFactorial(10);
         assertEquals("showing Factorial",actualresult);
     }
 
@@ -58,7 +58,7 @@ public class FactorialTest {
      */
     @Test
     public void givenInputShouldReturnFactorial(){
-        String actualresult=factorialTest.printLongFactorial(20);
+        String actualresult=factorial.printLongFactorial(20);
         assertEquals("Factorial of long",actualresult);
     }
     /*

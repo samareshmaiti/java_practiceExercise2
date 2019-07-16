@@ -29,21 +29,21 @@ In the setup method ,object of class is declared
         this.getFileNameAndData=null;
     }
     @Test
-    public void givenFileNameShouldReturnString()
+    public void givenFileNameShouldReturnFileName()
     {
-        String[] actualresult =getFileNameAndData.getResult("Documents.java");
+        String[] actualresult =getFileNameAndData.getFileName("Documents.java");
         assertEquals("file name is correct",actualresult);
     }
     @Test
     public void givenFileNameShouldReturnError()
     {
-        String[] actualresult =getFileNameAndData.getResult("@hello");
+        String[] actualresult =getFileNameAndData.getFileName("@hello");
         assertEquals("file name is not correct",actualresult);
     }
     @Test
     public void givenFileNameShouldReturnNoSuchFileFound()
     {
-        String[] actualresult =getFileNameAndData.getResult("txt");
+        String[] actualresult =getFileNameAndData.getFileName("txt");
         assertEquals("file name extension is correct",actualresult);
     }
 }

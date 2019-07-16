@@ -34,25 +34,24 @@ public class StudentDataTest {
     /* this function will return proper output
      */
     @Test
-    public void givenNumberShouldReturnString(){
-        int actualresult =studentData.getStudentData(7);
-        assertEquals("entered proper value",actualresult);
-
+    public void givenNumberShouldReturnErrorIfNumberNotValid() {
+        String actualresult = studentData.getStudentData(120, 30, -20, 59);
+        assertEquals("entered proper value between range", actualresult);
     }
-    /* this function will return to enter positive value
-     */
     @Test
-    public void givenNegativeNumberShouldReturnError(){
-        int actualresult = studentData.getStudentData(-2);
-        assertEquals("enter positive value",actualresult);
+    public void givenNumberShouldReturnMinimum() {
+        int actualresult = studentData.getStudentData(80, 30, 66, 59);
+        assertEquals(30, actualresult);
     }
-    /* this function will return enter value within limit
-     */
-
     @Test
-    public void givenNumberShouldReturnOutOfRange(){
-        int actualresult = studentData.getStudentData(100);
-        assertEquals("enter value within the limit",actualresult);
+    public void givenNumberShouldReturnAverage() {
+        float actualresult = studentData.getStudentData(80, 30, 66, 59);
+        assertEquals(58.75, actualresult,2);
+    }
+    @Test
+    public void givenNumberShouldReturnMaximum() {
+        int actualresult = studentData.getStudentData(80, 30, 66, 59);
+        assertEquals(80, actualresult);
     }
 
 }
