@@ -17,6 +17,11 @@ In the setup method ,object of class is declared
     {
         this.getFileNameAndData=new GetFileNameAndDataTest();
     }
+    /*  @After annotation is used on a method containing java code to run after each test case.
+    These methods will run even if any exceptions are thrown in the test case or in the case
+    of assertion failures.
+    In the tear down method ,object is initialized with null so that obj is destroyed
+    */
 
     @After
     public void tearDown()

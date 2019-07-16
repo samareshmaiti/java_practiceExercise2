@@ -16,6 +16,11 @@ public class FrequencyOfWordsTest {
 
         this.frequencyOfWords = new FrequencyOfWords();
     }
+    /*  @After annotation is used on a method containing java code to run after each test case.
+    These methods will run even if any exceptions are thrown in the test case or in the case
+    of assertion failures.
+    In the tear down method ,object is initialized with null so that obj is destroyed
+    */
     @After
     public void tearDown()
     {
@@ -24,12 +29,5 @@ public class FrequencyOfWordsTest {
     }
 
 
-
-    @Test
-    public void givenFileNameShouldNotStartWithValidValue()
-    {
-        String actualresult =frequencyOfWords.frequency("@java");
-        assertEquals("file name is not correct",actualresult);
-    }
 
 }

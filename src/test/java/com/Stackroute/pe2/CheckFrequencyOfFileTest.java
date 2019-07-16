@@ -19,23 +19,40 @@ CheckFrequencyOfFile checkFrequencyOfFile;
         this.checkFrequencyOfFile=new CheckFrequencyOfFile();
     }
 
-
+    /*  @After annotation is used on a method containing java code to run after each test case.
+    These methods will run even if any exceptions are thrown in the test case or in the case
+    of assertion failures.
+    In the tear down method ,object is initialized with null so that obj is destroyed
+    */
     @After
     public void tearDown()
     {
         this.checkFrequencyOfFile=null;
     }
+    /* this function checks for empty file
+     */
     @Test
     public void givenFileShouldHaveSomeData()
     {
-        String[] actualresult = checkFrequencyOfFile.checkFrequency("");
+        String[] actualresult = checkFrequencyOfFile.checkFrequency(" ");
         assertEquals("file is empty",actualresult);
     }
+    /* this function checks whether there is a duplicate file
+     */
     @Test
-    public void givenFileValueDataShouldBeUnique()
+    public void givenFileShouldBeUnique()
     {
         String[] actualresult = checkFrequencyOfFile.checkFrequency("");
         assertEquals("word is alredy taken",actualresult);
+    }
+    /* this function checks for proper output
+     */
+    @Test
+
+    public void givenFileShouldReturnProperOutput()
+    {
+        String[] actualresult = checkFrequencyOfFile.checkFrequency("input.txt");
+        assertEquals("proper output",actualresult);
     }
 
 }

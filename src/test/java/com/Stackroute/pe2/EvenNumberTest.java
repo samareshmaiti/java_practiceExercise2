@@ -16,6 +16,11 @@ public class EvenNumberTest {
 
         this.evenNumberTest= new EvenNumber();
     }
+    /*  @After annotation is used on a method containing java code to run after each test case.
+    These methods will run even if any exceptions are thrown in the test case or in the case
+    of assertion failures.
+    In the tear down method ,object is initialized with null so that obj is destroyed
+    */
     @After
     public void tearDown()
     {
@@ -24,11 +29,5 @@ public class EvenNumberTest {
     }
 
 
-    @Test
-    public void givenInputAndShouldProperOutput() {
-        //act
-        boolean actualResult=evenNumberTest.isEven(7);
-        //assert
-        assertEquals("false", actualResult);
-    }
+
 }

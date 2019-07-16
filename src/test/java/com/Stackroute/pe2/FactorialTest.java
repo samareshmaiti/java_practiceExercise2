@@ -17,7 +17,11 @@ public class FactorialTest {
     {
         this.factorialTest=new FactorialTest();
     }
-
+    /*  @After annotation is used on a method containing java code to run after each test case.
+    These methods will run even if any exceptions are thrown in the test case or in the case
+    of assertion failures.
+    In the tear down method ,object is initialized with null so that obj is destroyed
+    */
     @After
     public void tearDown()
     {
@@ -25,12 +29,12 @@ public class FactorialTest {
     }
 
     @Test
-    public void givenInputValueShouldBePositive(){
+    public void givenInputShouldBePositive(){
         String actualresult=factorialTest.printIntFactorial(n);
         assertEquals("value should be positive",actualresult);
     }
     @Test
-    public void givenInputValueShouldBeOutOfRange(){
+    public void givenInputShouldReturnOutOfRange(){
         String actualresult=factorialTest.printIntFactorial(n);
         assertEquals("value should be within the range",actualresult);
     }
