@@ -27,17 +27,26 @@ public class FactorialTest {
     {
        this.factorialTest=null;
     }
+    /*
+    This method will return an error as the given input is negative
+     */
 
     @Test
     public void givenInputShouldReturnError(){
         String actualresult=factorialTest.printIntFactorial(-9);
         assertEquals("value should be positive",actualresult);
     }
+    /*
+    This method will return an output
+     */
     @Test
     public void givenInputShouldReturnOutOfRange(){
         String actualresult=factorialTest.printIntFactorial(15);
         assertEquals("value should be within the range",actualresult);
     }
+    /*
+    This method will return a message showing out of range
+     */
     @Test
     public void givenInputShouldReturnResult(){
         String actualresult=factorialTest.printLongFactorial(10);

@@ -27,19 +27,23 @@ public class EvenNumberTest {
 
         this.evenNumberTest=null;
     }
+    /*
+    this function will return an error as the input is negative
+    */
+
     @Test
     public void givenNegativeNumberShouldReturnError(){
         boolean actualresult = evenNumberTest.getResult(-2);
         assertEquals("enter positive value",actualresult);
     }
-    /* this function will return enter value within limit
+    /* this function will return enter value within limit and true
      */
     @Test
     public void givenNegativeNumberShouldReturnTrue(){
         boolean actualresult = evenNumberTest.getResult(10);
         assertEquals("True",actualresult);
     }
-    /* this function will return enter value within limit
+    /* this function will return enter value within limit and false
      */
     @Test
     public void givenNegativeNumberShouldReturnFalse(){

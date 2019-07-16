@@ -50,7 +50,7 @@ CheckFrequencyOfFile checkFrequencyOfFile;
     /* this function checks whether there is a duplicate file
      */
     @Test
-    public void givenFileShouldReturnDuplicate()
+    public void givenFileShouldReturnDuplicateMessage()
     {
         String[] actualresult = checkFrequencyOfFile.checkFrequency("input.txt");
         assertEquals("word is alredy taken",actualresult);
