@@ -34,7 +34,7 @@ public class FactorialTest {
     @Test
     public void givenInputShouldReturnError(){
         String actualresult=factorialTest.printIntFactorial(-9);
-        assertEquals("value should be positive",actualresult);
+        assertNotEquals("value should be positive",actualresult);
     }
     /*
     This method will return an output
