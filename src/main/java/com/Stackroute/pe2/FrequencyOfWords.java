@@ -6,7 +6,7 @@ public class FrequencyOfWords {
 
 
 
-    public String outPut(String input)
+    public String frequency(String input)
     {
 
         return null;

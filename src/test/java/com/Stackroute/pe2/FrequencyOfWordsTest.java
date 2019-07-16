@@ -2,19 +2,21 @@ package com.Stackroute.pe2;
 
 import org.junit.*;
 
+import static org.junit.Assert.assertEquals;
+
 public class FrequencyOfWordsTest {
 
-    FrequencyOfWords practiceExercise2;
+    FrequencyOfWords frequencyOfWords;
     @Before
     public void setup() {
         System.out.println("Inside before");
-        this.practiceExercise2= new FrequencyOfWords();
+        this.frequencyOfWords = new FrequencyOfWords();
     }
     @After
     public void tearDown()
     {
         System.out.println("inside after");
-        practiceExercise2=null;
+        frequencyOfWords =null;
     }
     @BeforeClass
     public static void beforeClass()
@@ -31,6 +33,9 @@ public class FrequencyOfWordsTest {
 
 
     @Test
-    public void outPut() {
+    public void givenFileNameShouldNotStartWithValidValue()
+    {
+        String actualresult =frequencyOfWords.frequency("@java");
+        assertEquals("file name is not correct",actualresult);
     }
 }
